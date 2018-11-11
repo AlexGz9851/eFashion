@@ -1,0 +1,25 @@
+@import "templates/template.scss";
+@import "templates/header.scss";
+@import "templates/products.scss";
+@import "templates/navbar.scss";
+@import "templates/footer.scss";
+
+.del:hover{
+    background-color: red; 
+    border-color: darkred;
+}
+
+.modify:hover{
+    background-color: darkorange;
+    border-color: saddlebrown;
+}
+
+.quantity{
+    padding:1em;
+    width:50%;
+}
+
+.btn{
+    width:100%;
+    border-color:darkgoldenrod;
+}

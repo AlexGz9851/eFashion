@@ -1,0 +1,96 @@
+// Mixins
+
+// Bootstrap Button Variant
+
+@mixin button-variant($color, $background, $border) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+
+  &:focus,
+  &.focus {
+    color: $color;
+    background-color: darken($background, 10%);
+        border-color: darken($border, 25%);
+  }
+  &:hover {
+    color: $color;
+    background-color: darken($background, 10%);
+        border-color: darken($border, 12%);
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $color;
+    background-color: darken($background, 10%);
+        border-color: darken($border, 12%);
+
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $color;
+      background-color: darken($background, 17%);
+          border-color: darken($border, 25%);
+    }
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: $background;
+          border-color: $border;
+    }
+  }
+
+
+}
+
+// Background Cover Mixin
+
+@mixin background-cover {
+  background-size: cover;
+}
+
+// Font Mixins
+
+@mixin serif-font {
+  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+@mixin script-font {
+  font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
+}
+
+@mixin body-font {
+  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+@mixin heading-font {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+//Product transformation Mixin
+
+@mixin transform($x,$y,$s, $r){
+  transform: translate($x,$y) scale($s) rotate($r);
+  -webkit-transform: translate($x,$y) scale($s) rotate($r);
+  -moz-transform: translate($x,$y) scale($s) rotate($r);
+  transform: translate($x,$y) scale($s) rotate($r);
+  -ms-transform: translate($x,$y) scale($s) rotate($r);
+
+}
+
+@mixin transition {
+  -webkit-transition: all 500ms ease-in-out; // IE 9
+  -moz-transition: all 500ms ease-in-out; // Firefox
+  -ms-transition: all 500ms ease-in-out; // Safari and Chrome 
+  transition: all 500ms ease-in-out;
+}

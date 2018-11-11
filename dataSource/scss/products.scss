@@ -1,0 +1,13 @@
+@import "templates/template.scss";
+@import "templates/products.scss";
+@import "templates/navbar.scss";
+@import "templates/footer.scss";
+@import "templates/header.scss";
+
+span{
+    .fa-circle{ color:$theme-primary; }
+}
+
+header{
+    margin-top: 3em;
+}
